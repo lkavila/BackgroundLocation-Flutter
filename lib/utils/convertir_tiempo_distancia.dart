@@ -10,7 +10,7 @@ class ConvertirTD{
     }else{
       int kil = distancia.floor();
       double metros = (distancia - kil)*1000;
-      return (kil.toString()+"  kilometros con "+metros.round().toString()+" mts");
+      return (kil.toString()+"  kilometros y "+metros.round().toString()+" mts");
     }
   } 
 

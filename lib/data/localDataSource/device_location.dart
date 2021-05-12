@@ -40,12 +40,11 @@ class DeviceLocation {
                 message: "Se van a ir guardando los datos de su recorrido aún en segundo plano",
                 icon: "@mipmap/ic_launcher",
         );
-        BackgroundLocation.setAndroidConfiguration(1000);
         BackgroundLocation.getLocationUpdates((value){
             currentLocationStream.add(value);
             tiempo = tiempo + 0.5;
             if(value.speed>1){
-              veloPromedio.add(value.speed);
+              veloPromedio.add(value.speed);//la velocidad promedio solo se actualiza si la velocidad actual es mayor a 1m/s
               velocidadProm = veloPromedio.reduce((value, element) => value+element)/veloPromedio.length;
               distancia = distancia + value.speed;
               print(distancia);

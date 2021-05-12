@@ -2,8 +2,6 @@ import 'package:background_processes/data/localDataSource/device_location.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart';
-import 'package:background_processes/Domain/UseCases/get_current_location.dart';
-import 'package:background_processes/Domain/UseCases/start_updates.dart';
 import 'package:background_processes/Domain/UseCases/stop_updates.dart';
 
 class PositionController extends GetxController{

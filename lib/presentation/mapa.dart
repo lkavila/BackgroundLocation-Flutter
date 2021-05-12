@@ -73,29 +73,29 @@ class MapSampleState extends State<MapSample> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            '   latitud: ' + locationData.data.latitude.toString(),
+                            '  latitud: ' + locationData.data.latitude.toString(),
                             style: TextStyle(color: Colors.white, fontSize: 18),
                             textAlign: TextAlign.left,
                           ),
                           Text(
-                            '   longitud: ' +
+                            '  longitud: ' +
                                 locationData.data.longitude.toString(),
                             style: TextStyle(color: Colors.white, fontSize: 18),
                           ),
                           Text(
-                            '   velocidad: ' + (velocidad*3.6).toStringAsFixed(5) + ' km/h',
+                            '  velocidad: ' + (velocidad*3.6).toStringAsFixed(5) + ' km/h',
                             style: TextStyle(color: Colors.white, fontSize: 18),
                           ),
                           Text(
-                            '   velocidad promedio: ' + (_position.deviceLocation.velocidadProm*3.6).toStringAsFixed(5) + ' km/h',
+                            '  velocidad promedio: ' + (_position.deviceLocation.velocidadProm*3.6).toStringAsFixed(5) + ' km/h',
                             style: TextStyle(color: Colors.white, fontSize: 18),
                           ),
                           Text(
-                            '   distancia recorrida: ' +  ConvertirTD.convertDistancia( _position.deviceLocation.distancia),
+                            '  distancia recorrida: ' +  ConvertirTD.convertDistancia( _position.deviceLocation.distancia),
                             style: TextStyle(color: Colors.white, fontSize: 18),
                           ),
                           Text(
-                            '   tiempo: ' + ConvertirTD.convertirTiempo(_position.deviceLocation.tiempo),
+                            '  tiempo: ' + ConvertirTD.convertirTiempo(_position.deviceLocation.tiempo),
                             style: TextStyle(color: Colors.white, fontSize: 18),
                           ),
                         ],
@@ -155,7 +155,7 @@ class MapSampleState extends State<MapSample> {
     final GoogleMapController controller = await _controller.future;
     CameraPosition _kLake = new CameraPosition(
       target: LatLng(lat, lon),
-      zoom: 13);
+      zoom: 16);
     controller.animateCamera(CameraUpdate.newCameraPosition(_kLake));
   }
 }
